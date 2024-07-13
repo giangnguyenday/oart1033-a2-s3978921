@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <link rel="stylesheet" type="text/css" href="About Style Sheet.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    </style>
+    <script src="Script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div><img id="logo" src="Logo_Nav.png"></div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="About.html">About</a>
+            </li>
+            <li>
+                <a href="Work.html">Work</a>
+            </li>
+        </ul>
+        <div class="contact_button"><a href="Contact.html">Contact</a></div>
+        <div id="hamburger_menu" onclick="openNav()"><img src="Hamburger Menu.png"></div>
+    </header>
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="closeNav()"><img src="Quit.png"></div>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Work.html">Work</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("responsive_menu").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("responsive_menu").style.width = "0%";
+        }
+    </script>
+    <img class="snowflake" id="sf1" src="A2_Snowflake.png">
+    <img class="snowflake" id="sf2" src="A2_Snowflake.png">
+    <img class="snowflake" id="sf3" src="A2_Snowflake.png">
+    <img class="snowflake" id="sf4" src="A2_Snowflake.png">
+    <img class="snowflake" id="sf5" src="A2_Snowflake.png">
+    <div id="about_heading">
+        <h2>Welcome to my</h2>
+        <h1>PORTFOLIO</h1>
+    </div>
+    <img class="snowflake" id="sf6" src="A2_Snowflake.png">
+    <img class="snowflake" id="sf7" src="A2_Snowflake.png">
+    <img class="snowflake" id="sf8" src="A2_Snowflake.png">
+    <img class="snowflake" id="sf9" src="A2_Snowflake.png">
+    <img class="snowflake" id="sf10" src="A2_Snowflake.png">
+    <div class="about_container_grid">
+        <div class="about_me">
+            <h3>About me</h3>
+            <p>My name is Tran Nguyen Tuyet Minh - a digital media student based in Vietnam.<br>I hope to devote my
+                flexibility as well as the sense of responsibility to create such digital artworks
+                that are aesthetic, effective and influential. My desire is to learn and produce projects that bring
+                multi-sensory experiences to the publics.<br>
+                In my first year at RMIT, I started specializing in <strong>iconography, interactive web design and
+                    UX/UI</strong>.</p>
+        </div>
+        <div id="education">
+            <h3>Education</h3>
+            <ul>
+                <li>2023-ongoing</li>
+                <li class="non-list-style"><strong>Bachelor of Digital Media</strong></li>
+                <li class="non-list-style">RMIT Vietnam University</li>
+            </ul>
+        </div>
+        <div id="softwares">
+            <h3 id="softwares_title">Softwares</h3>
+            <div class="icon">
+                <img src="Figma.png">
+                <img src="Illustrator.png">
+                <img src="InDesign.png">
+            </div>
+        </div>
+        <div id="language">
+            <h3>Languages</h3>
+            <p><strong>Vietnamese</strong> (Native)
+                <br><strong>English</strong> (Advanced)
+            </p>
+        </div>
+    </div>
+    <footer>© 2023 Tran Nguyen Tuyet Minh. All rights reserved.</footer>
+</body>
+
+</html>

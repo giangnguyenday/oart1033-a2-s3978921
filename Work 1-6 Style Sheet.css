@@ -1,0 +1,319 @@
+/* WORK 1 to 6 */
+@font-face {
+    font-family: Clash Display Regular;
+    src: url(ClashDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: Clash Display SemiBold;
+    src: url(ClashDisplay-Semibold.ttf);
+}
+
+/** BACKGROUND **/
+body {
+    margin: 0%;
+    height: 100%;
+    position: relative;
+    background-color: #080C30;
+}
+
+/** NAVIGATION MENU **/
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    position: fixed;
+    padding: 1vw 0;
+    background: linear-gradient(180deg, #080C30 0%, rgba(8, 12, 48, 0.00) 100%);
+    backdrop-filter: blur(0.1vw);
+    display: flex;
+    flex-direction: row;
+    gap: 20vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header a {
+    color: rgba(187, 125, 247, 1);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#logo {
+    width: 2.5vw;
+    height: 2.825vw;
+}
+
+.navigation_menu {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.navigation_menu a {
+    transition: ease-in-out 0.2s;
+}
+
+.navigation_menu a:hover {
+    color: rgba(232, 212, 252, 1);
+}
+
+.contact_button {
+    display: inline-flex;
+    padding: 0.5vw 1.25vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(187, 125, 247, 1);
+    border-radius: 0.625vw;
+    transition: ease-in-out 0.2s;
+}
+
+.contact_button:hover {
+    background-color: rgba(141, 39, 242, 1);
+}
+
+.contact_button a {
+    color: rgba(28, 8, 48, 1);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+}
+
+/** TITLE **/
+.title {
+    width: 100%;
+    font-family: Clash Display SemiBold;
+    font-size: 6vw;
+    background: linear-gradient(180deg, #8d27f2, #bb7df7, #d1a9fa, #e8d4fc);
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0.2vw 0.2vw 0.2vw #381061);
+    text-align: center;
+}
+
+/** DESCRIPTION **/
+.description {
+    width: 75vw;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: rgba(209, 169, 250, 1);
+    margin-bottom: 2vw;
+}
+
+/** SHOWCASE **/
+.showcase {
+    position: absolute;
+    top: 5vw;
+}
+
+/** IMAGE **/
+.showcase .slide {
+    width: 75vw;
+    height: auto;
+}
+
+.video {
+    width: 75vw;
+    height: 50vw;
+}
+
+.image_container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    row-gap: 1.5vw;
+    margin-bottom: 3vw;
+}
+
+/* RESPONSIVE MENU */
+#hamburger_menu {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+/** Tablet **/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /*** OVERLAY MENU ***/
+    header {
+        gap: 36vw;
+        padding: 2vw 0;
+    }
+
+    .contact_button,
+    .navigation_menu a {
+        display: none;
+    }
+
+    #hamburger_menu {
+        display: block;
+    }
+
+    .overlay {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background-color: rgba(8, 12, 48);
+        background-color: rgba(8, 12, 48, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 30%;
+        width: 100%;
+        text-align: center;
+        margin-top: 1.5vw;
+    }
+
+    .overlay a {
+        color: rgba(187, 125, 247, 1);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 8vw;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0.5vw;
+        display: block;
+        transition: ease-in-out 300ms;
+    }
+
+    .overlay a:focus {
+        color: rgba(232, 212, 252, 1);
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 2.5vw;
+        right: 5vw;
+    }
+
+    /*** RESIZE: logo, hamburger menu, close btn ***/
+    .overlay .closebtn img,
+    #logo,
+    #hamburger_menu img {
+        width: 3vw;
+        height: auto;
+    }
+
+    /*** TITLE ***/
+    .title {
+        font-size: 7vw;
+    }
+
+    /*** DESCRIPTION ***/
+    .description {
+        font-size: 1.75vw;
+    }
+
+    /*** SHOWCASE ***/
+    .showcase {
+        top: 6.5vw;
+    }
+}
+
+/** Mobile **/
+@media screen and (max-width: 767px) {
+
+    /*** OVERLAY MENU ***/
+    header {
+        gap: 32vw;
+        padding: 2.5vw 0;
+    }
+
+    .contact_button,
+    .navigation_menu a {
+        display: none;
+    }
+
+    #hamburger_menu {
+        display: block;
+    }
+
+    .overlay {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background-color: rgba(8, 12, 48);
+        background-color: rgba(8, 12, 48, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 35%;
+        width: 100%;
+        text-align: center;
+        margin-top: 3vw;
+    }
+
+    .overlay a {
+        color: rgba(187, 125, 247, 1);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 8vw;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0.5vw;
+        display: block;
+        transition: ease-in-out 300ms;
+    }
+
+    .overlay a:focus {
+        color: rgba(232, 212, 252, 1);
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 5vw;
+        right: 5vw;
+    }
+
+    /*** RESIZE: logo, hamburger menu, close btn ***/
+    .overlay .closebtn img,
+    #logo,
+    #hamburger_menu img {
+        width: 4vw;
+        height: auto;
+    }
+
+    /*** TITLE ***/
+    .title {
+        width: 75vw;
+        margin: auto;
+        text-align: left;
+        font-size: 8vw;
+        line-height: 7vw;
+        margin-bottom: 1.5vw;
+    }
+
+    /*** DESCRIPTION ***/
+    .description {
+        font-size: 3vw;
+        margin-bottom: 4vw;
+    }
+
+    /*** SHOWCASE ***/
+    .showcase {
+        top: 12vw;
+    }
+}

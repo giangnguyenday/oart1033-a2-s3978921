@@ -1,0 +1,679 @@
+/* ABOUT */
+@font-face {
+    font-family: Clash Display Regular;
+    src: url(ClashDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: Clash Display SemiBold;
+    src: url(ClashDisplay-Semibold.ttf);
+}
+
+/** BACKGROUND **/
+body {
+    margin: 0%;
+    height: 100vw;
+    position: relative;
+    background: linear-gradient(180deg, #080C30 0%, #551791 100%);
+}
+
+/** NAVIGATION MENU **/
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    position: fixed;
+    padding: 1vw 0;
+    background: linear-gradient(180deg, #080C30 0%, rgba(8, 12, 48, 0.00) 100%);
+    backdrop-filter: blur(0.1vw);
+    display: flex;
+    flex-direction: row;
+    gap: 20vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header a {
+    color: rgba(187, 125, 247, 1);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#logo {
+    width: 2.5vw;
+    height: 2.825vw;
+}
+
+.navigation_menu {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.navigation_menu a {
+    transition: ease-in-out 0.2s;
+}
+
+.navigation_menu a:hover {
+    color: rgba(232, 212, 252, 1);
+}
+
+.contact_button {
+    display: inline-flex;
+    padding: 0.5vw 1.25vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(187, 125, 247, 1);
+    border-radius: 0.625vw;
+    transition: ease-in-out 0.2s;
+}
+
+.contact_button:hover {
+    background-color: rgba(141, 39, 242, 1);
+}
+
+.contact_button a {
+    color: rgba(28, 8, 48, 1);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+}
+
+/** HEADING **/
+h2 {
+    font-family: Clash Display Regular;
+    font-size: 3vw;
+    background: linear-gradient(180deg, #8d27f2, #bb7df7, #d1a9fa, #e8d4fc);
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0.2vw 0.2vw 0.2vw #381061);
+    text-align: center;
+}
+
+h1 {
+    font-family: Clash Display SemiBold;
+    font-size: 6vw;
+    background: linear-gradient(180deg, #8d27f2, #bb7df7, #d1a9fa, #e8d4fc);
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0.2vw 0.2vw 0.2vw #381061);
+    text-align: center;
+    margin-top: -3vw;
+}
+
+#about_heading {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 22vw;
+}
+
+/** SNOWFLAKE **/
+.snowflake {
+    animation-name: rotate;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    transition: ease-in-out 100ms;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.snowflake:hover {
+    animation-play-state: paused;
+}
+
+#sf1 {
+    width: 4.061vw;
+    height: auto;
+    position: absolute;
+    top: 31vw;
+    left: 4vw;
+}
+
+#sf10 {
+    width: 4.061vw;
+    height: auto;
+    position: absolute;
+    top: 31vw;
+    right: 4vw;
+}
+
+#sf2 {
+    width: 13.538vw;
+    height: auto;
+    position: absolute;
+    top: 11vw;
+    left: 7vw;
+}
+
+#sf9 {
+    width: 13.538vw;
+    height: auto;
+    position: absolute;
+    top: 36vw;
+    right: 7vw;
+}
+
+#sf3 {
+    width: 18.05vw;
+    height: auto;
+    position: absolute;
+    top: 35vw;
+    left: 13vw;
+}
+
+#sf8 {
+    width: 18.05vw;
+    height: auto;
+    position: absolute;
+    top: 7vw;
+    right: 13vw;
+}
+
+#sf4 {
+    width: 9.025vw;
+    height: auto;
+    position: absolute;
+    top: 7vw;
+    left: 28vw;
+}
+
+#sf7 {
+    width: 9.025vw;
+    height: auto;
+    position: absolute;
+    top: 45vw;
+    right: 28vw;
+}
+
+#sf5 {
+    width: 4.061vw;
+    height: auto;
+    position: absolute;
+    top: 14vw;
+    left: 48vw;
+}
+
+#sf6 {
+    width: 4.061vw;
+    height: auto;
+    position: absolute;
+    top: 39vw;
+    left: 48vw;
+}
+
+/** CONTENT **/
+.about_container_grid {
+    position: absolute;
+    top: 60vw;
+    margin-left: 16vw;
+    margin-right: 16vw;
+    display: grid;
+    justify-items: left;
+    grid-template-areas:
+        'about_me education'
+        'about_me softwares'
+        'about_me language';
+}
+
+.about_me {
+    grid-area: about_me;
+    padding-right: 12vw;
+}
+
+#education {
+    grid-area: education;
+}
+
+#softwares {
+    grid-area: softwares;
+}
+
+#language {
+    grid-area: language;
+}
+
+h3 {
+    font-family: Clash Display SemiBold;
+    font-size: 3rem;
+    background: linear-gradient(180deg, #8d27f2, #bb7df7, #d1a9fa, #e8d4fc);
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0.2vw 0.2vw 0.2vw #381061);
+    text-align: left;
+    margin-bottom: -1.25vw;
+}
+
+p,
+.about_container_grid ul {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: rgba(209, 169, 250, 1);
+    text-shadow: 0.2vw 0.2vw 0.2vw rgba(0, 0, 0, 0.25);
+    text-align: left;
+    margin-bottom: -2vw;
+}
+
+.icon {
+    margin-top: -0.75vw;
+    margin-bottom: -3vw;
+}
+
+#softwares_title {
+    margin-bottom: 0.5vw;
+}
+
+.non-list-style {
+    list-style-type: none;
+}
+
+/** FOOTER **/
+footer {
+    width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1vw;
+    color: rgba(209, 169, 250, 1);
+    position: absolute;
+    bottom: 1vw;
+    text-align: center;
+    opacity: 30%;
+}
+
+/* RESPONSIVE MENU */
+#hamburger_menu {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+/** Tablet **/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /*** OVERLAY MENU ***/
+    header {
+        gap: 36vw;
+        padding: 2vw 0;
+    }
+
+    .contact_button,
+    .navigation_menu a {
+        display: none;
+    }
+
+    #hamburger_menu {
+        display: block;
+    }
+
+    .overlay {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background-color: rgba(8, 12, 48);
+        background-color: rgba(8, 12, 48, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 30%;
+        width: 100%;
+        text-align: center;
+        margin-top: 1.5vw;
+    }
+
+    .overlay a {
+        color: rgba(187, 125, 247, 1);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 8vw;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0.5vw;
+        display: block;
+        transition: ease-in-out 300ms;
+    }
+
+    .overlay a:focus {
+        color: rgba(232, 212, 252, 1);
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 2.5vw;
+        right: 5vw;
+    }
+
+    /*** RESIZE: logo, hamburger menu, close btn ***/
+    .overlay .closebtn img,
+    #logo,
+    #hamburger_menu img {
+        width: 3vw;
+        height: auto;
+    }
+
+    /*** BACKGROUND ***/
+    body {
+        height: 205vw;
+    }
+    
+    /*** HEADING ***/
+    h2 {
+        font-size: 3.5vw;
+    }
+
+    h1 {
+        font-size: 7vw;
+        margin-top: -3.5vw;
+    }
+
+    #about_heading {
+        top: 36vw;
+    }
+
+    /*** SNOWFLAKE ***/
+    #sf1, #sf10 {
+        width: 10vw;
+    } 
+
+    #sf1 {
+        top: 48vw;
+        left: 5vw;
+    }
+
+    #sf10 {
+        top: 40vw;
+        right: 5vw;
+    }
+
+    #sf2, #sf9 {
+        width: 20vw;
+    }
+
+    #sf2 {
+        top: 16vw;
+        left: 5vw;
+    }
+
+    #sf9 {
+        top: 60vw;
+        right: 5vw;
+    }
+
+    #sf3, #sf8 {
+        width: 30vw;
+    }
+
+    #sf3 {
+        top: 60vw;
+        left: 8vw;
+    }
+
+    #sf8 {
+        top: 8vw;
+        right: 8vw;
+    }
+
+    #sf4, #sf7 {
+        width: 10vw;
+    }
+
+    #sf4 {
+        top: 6vw;
+        left: 36vw;
+    }
+
+    #sf7 {
+        top: 80vw;
+        right: 36vw;
+    }
+
+    #sf5, #sf6 {
+        width: 5vw;
+    }
+
+    #sf5 {
+        top: 28vw;
+    }
+
+    #sf6 {
+        top: 56vw;
+    }
+
+    /*** CONTENT ***/
+    .about_container_grid {
+        top: 96vw;
+        grid-template-areas: 
+        'about_me'
+        'education'
+        'softwares'
+        'language';
+    }
+
+    .about_me {
+        padding-right: 0%;
+    }
+
+    h3 {
+        font-size: 5.75vw;
+        margin-bottom: -2vw;
+    }
+
+    p, .about_container_grid ul {
+        font-size: 2.5vw;
+        margin-bottom: -2.75vw;
+    }
+
+    .icon {
+        margin-bottom: -4vw;
+    }
+
+    /*** FOOTER ***/
+    footer {
+        font-size: 1.25vw;
+    }
+}
+
+/** Mobile **/
+@media screen and (max-width: 767px) {
+
+    /*** OVERLAY MENU ***/
+    header {
+        gap: 32vw;
+        padding: 2.5vw 0;
+    }
+
+    .contact_button,
+    .navigation_menu a {
+        display: none;
+    }
+
+    #hamburger_menu {
+        display: block;
+    }
+
+    .overlay {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background-color: rgba(8, 12, 48);
+        background-color: rgba(8, 12, 48, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 35%;
+        width: 100%;
+        text-align: center;
+        margin-top: 3vw;
+    }
+
+    .overlay a {
+        color: rgba(187, 125, 247, 1);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 8vw;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0.5vw;
+        display: block;
+        transition: ease-in-out 300ms;
+    }
+
+    .overlay a:focus {
+        color: rgba(232, 212, 252, 1);
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 5vw;
+        right: 5vw;
+    }
+
+    /*** RESIZE: logo, hamburger menu, close btn ***/
+    .overlay .closebtn img,
+    #logo,
+    #hamburger_menu img {
+        width: 4vw;
+        height: auto;
+    }
+
+    /*** BACKGROUND ***/
+    body {
+        height: 432vw;
+    }
+    
+    /*** HEADING ***/
+    h2 {
+        font-size: 6vw;
+    }
+
+    h1 {
+        font-size: 12vw;
+        margin-top: -6vw;
+    }
+
+    #about_heading {
+        top: 100vw;
+    }
+
+    /*** SNOWFLAKE ***/
+    #sf1, #sf4, #sf7, #sf10 {
+        width: 11vw;
+    } 
+
+    #sf1 {
+        top: 24vw;
+        left: 6vw;
+    }
+
+    #sf10 {
+        top: 80vw;
+        right: 9vw;
+    }
+
+    #sf2, #sf9 {
+        width: 22vw;
+    }
+
+    #sf2 {
+        top: 68vw;
+        left: 16vw;
+    }
+
+    #sf9 {
+        top: 132vw;
+        right: 16vw;
+    }
+
+    #sf3, #sf8 {
+        width: 44vw;
+    }
+
+    #sf3 {
+        top: 18vw;
+        left: 48vw;
+    }
+
+    #sf8 {
+        top: 156vw;
+        left: 6vw;
+    }
+
+    #sf4 {
+        top: 132vw;
+        left: 9vw;
+    }
+
+    #sf7 {
+        top: 180vw;
+        right: 7vw;
+    }
+
+    #sf5, #sf6 {
+        display: none;
+    }
+
+    /*** CONTENT ***/
+    .about_container_grid {
+        top: 234vw;
+        grid-template-areas: 
+        'about_me'
+        'education'
+        'softwares'
+        'language';
+    }
+
+    .about_me {
+        padding-right: 0%;
+    }
+
+    h3 {
+        font-size: 8vw;
+        margin-bottom: -3.5vw;
+    }
+
+    p, .about_container_grid ul {
+        font-size: 4vw;
+        margin-bottom: -2.75vw;
+    }
+
+    .icon {
+        margin-bottom: -6vw;
+    }
+
+    #softwares .icon img {
+        width: 16vw;
+    }
+
+    /*** FOOTER ***/
+    footer {
+        font-size: 2vw;
+    }
+}

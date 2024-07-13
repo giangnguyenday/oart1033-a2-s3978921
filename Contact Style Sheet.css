@@ -1,0 +1,365 @@
+/* CONTACT */
+body {
+    margin: 0%;
+    position: relative;
+    background: rgba(85, 23, 145, 1);
+}
+
+@font-face {
+    font-family: Clash Display Regular;
+    src: url(ClashDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: Clash Display SemiBold;
+    src: url(ClashDisplay-Semibold.ttf);
+}
+
+/** BACKGROUND **/
+#Contact_BG_DESKTOP {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: -5;
+}
+
+#Contact_BG_TABLET {
+    display: none;
+}
+
+#Contact_BG_MOBILE {
+    display: none;
+}
+
+/** NAVIGATION MENU **/
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    position: fixed;
+    padding: 1vw 0;
+    background: linear-gradient(180deg, #080C30 0%, rgba(8, 12, 48, 0.00) 100%);
+    backdrop-filter: blur(0.1vw);
+    display: flex;
+    flex-direction: row;
+    gap: 20vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header a {
+    color: rgba(187, 125, 247, 1);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#logo {
+    width: 2.5vw;
+    height: 2.825vw;
+}
+
+.navigation_menu {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.navigation_menu a {
+    transition: ease-in-out 0.2s;
+}
+
+.navigation_menu a:hover {
+    color: rgba(232, 212, 252, 1);
+}
+
+.contact_button {
+    display: inline-flex;
+    padding: 0.5vw 1.25vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(187, 125, 247, 1);
+    border-radius: 0.625vw;
+    transition: ease-in-out 0.2s;
+}
+
+.contact_button:hover {
+    background-color: rgba(141, 39, 242, 1);
+}
+
+.contact_button a {
+    color: rgba(28, 8, 48, 1);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+}
+
+/** CONTENT **/
+.contact_container {
+    margin: auto;
+    position: absolute;
+    top: 12vw;
+    left: 25vw;
+}
+
+.contact_heading {
+    font-family: Clash Display SemiBold;
+    font-size: 5vw;
+    line-height: 6vw;
+    background: linear-gradient(180deg, #8d27f2, #bb7df7, #d1a9fa, #e8d4fc);
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0.2vw 0.2vw 0.2vw #381061);
+    text-align: center;
+    margin-bottom: 1vw;
+}
+
+.contact_information {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5vw;
+    color: rgba(187, 125, 247, 1);
+    text-align: left;
+    line-height: 2.5vw;
+    width: 45%;
+    margin: auto;
+}
+
+.contact_information a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5vw;
+    color: rgba(187, 125, 247, 1);
+    transition: ease-in-out 300ms;
+}
+
+.contact_information a:hover {
+    color: rgba(232, 212, 252, 1);
+}
+
+/* RESPONSIVE MENU */
+#hamburger_menu {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+/** Tablet **/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /*** OVERLAY MENU ***/
+    header {
+        gap: 36vw;
+        padding: 2vw 0;
+    }
+
+    .contact_button,
+    .navigation_menu a {
+        display: none;
+    }
+
+    #hamburger_menu {
+        display: block;
+    }
+
+    .overlay {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background-color: rgba(8, 12, 48);
+        background-color: rgba(8, 12, 48, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 30%;
+        width: 100%;
+        text-align: center;
+        margin-top: 1.5vw;
+    }
+
+    .overlay a {
+        color: rgba(187, 125, 247, 1);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 8vw;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0.5vw;
+        display: block;
+        transition: ease-in-out 300ms;
+    }
+
+    .overlay a:focus {
+        color: rgba(232, 212, 252, 1);
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 2.5vw;
+        right: 5vw;
+    }
+
+    /*** RESIZE: logo, hamburger menu, close btn ***/
+    .overlay .closebtn img,
+    #logo,
+    #hamburger_menu img {
+        width: 3vw;
+        height: auto;
+    }
+
+    /*** BACKGROUND ***/
+    #Contact_BG_DESKTOP {
+        display: none;
+    }
+
+    #Contact_BG_TABLET {
+        display: block;
+        width: 100%;
+        height: auto;
+        z-index: -5;
+    }
+
+    /*** CONTENT ***/
+    .contact_container {
+        top: 40vw;
+        left: 16vw;
+    }
+
+    .contact_heading {
+        font-size: 7vw;
+        line-height: 7.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .contact_information {
+        font-size: 3vw;
+        line-height: 4.5vw;
+        width: 65%;
+        margin: auto;
+    }
+
+    .contact_information a {
+        font-size: 3vw;
+    }
+}
+
+/** Mobile **/
+@media screen and (max-width: 767px) {
+
+    /*** OVERLAY MENU ***/
+    header {
+        gap: 32vw;
+        padding: 2.5vw 0;
+    }
+
+    .contact_button,
+    .navigation_menu a {
+        display: none;
+    }
+
+    #hamburger_menu {
+        display: block;
+    }
+
+    .overlay {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background-color: rgba(8, 12, 48);
+        background-color: rgba(8, 12, 48, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 35%;
+        width: 100%;
+        text-align: center;
+        margin-top: 3vw;
+    }
+
+    .overlay a {
+        color: rgba(187, 125, 247, 1);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 8vw;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0.5vw;
+        display: block;
+        transition: ease-in-out 300ms;
+    }
+
+    .overlay a:focus {
+        color: rgba(232, 212, 252, 1);
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 5vw;
+        right: 5vw;
+    }
+
+    /*** RESIZE: logo, hamburger menu, close btn ***/
+    .overlay .closebtn img,
+    #logo,
+    #hamburger_menu img {
+        width: 4vw;
+        height: auto;
+    }
+
+    /*** BACKGROUND ***/
+    #Contact_BG_DESKTOP {
+        display: none;
+    }
+
+    #Contact_BG_MOBILE {
+        display: block;
+        width: 100%;
+        height: auto;
+        z-index: -5;
+    }
+
+    /*** CONTENT ***/
+    .contact_container {
+        top: 60vw;
+        left: 4vw;
+    }
+
+    .contact_heading {
+        width: 80%;
+        margin: auto;
+        font-size: 12.75vw;
+        line-height: 13vw;
+        margin-bottom: 2vw;
+        background: linear-gradient(180deg, #8d27f2, #bb7df7, #d1a9fa, #e8d4fc, #8d27f2, #bb7df7, #d1a9fa, #e8d4fc);
+        background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0.2vw 0.2vw 0.2vw #381061);
+    }
+
+    .contact_information {
+        font-size: 3.75vw;
+        line-height: 5.75vw;
+        width: 60%;
+        margin: auto;
+    }
+
+    .contact_information a {
+        font-size: 3.75vw;
+    }
+}

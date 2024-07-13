@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuck</title>
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <link rel="stylesheet" type="text/css" href="Work 1-6 Style Sheet.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><img id="logo" src="Logo_Nav.png"></div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="About.html">About</a>
+            </li>
+            <li>
+                <a href="Work.html">Work</a>
+            </li>
+        </ul>
+        <div class="contact_button"><a href="Contact.html">Contact</a></div>
+        <div id="hamburger_menu" onclick="openNav()"><img src="Hamburger Menu.png"></div>
+    </header>
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="closeNav()"><img src="Quit.png"></div>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Work.html">Work</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("responsive_menu").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("responsive_menu").style.width = "0%";
+        }
+    </script>
+    <div class="showcase">
+        <div class="title">Stuck</div>
+        <div class="description">
+            “Stuck” is a short movie that implies a teenager's self-liberation journey from being
+            overthinking. Since I was in charge of production and director assistant for the first time, the biggest
+            challenge was to visualize such an abstract detail like “thought” and “inner world”. Let's see how the team
+            solve the problem!
+        </div>
+        <div class="image_container">
+            <img class="slide" src="W2_Movie poster.png">
+            <img class="slide" src="W2_Movie details.png">
+            <img class="slide" src="W2_Script breakdown.png">
+            <iframe class="video" src="https://www.youtube.com/embed/MBj_k7lwPu0"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

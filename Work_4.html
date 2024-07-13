@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scented Sachet Tutorial</title>
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <link rel="stylesheet" type="text/css" href="Work 1-6 Style Sheet.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><img id="logo" src="Logo_Nav.png"></div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="About.html">About</a>
+            </li>
+            <li>
+                <a href="Work.html">Work</a>
+            </li>
+        </ul>
+        <div class="contact_button"><a href="Contact.html">Contact</a></div>
+        <div id="hamburger_menu" onclick="openNav()"><img src="Hamburger Menu.png"></div>
+    </header>
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="closeNav()"><img src="Quit.png"></div>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Work.html">Work</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("responsive_menu").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("responsive_menu").style.width = "0%";
+        }
+    </script>
+    <div class="showcase">
+        <div class="title">Scented Sachet Tutorial</div>
+        <div class="description">
+            A 5-step tutorial about how to DIY a scented sachet. This digital infographic marked my first approach to
+            interactive design domain. Take time and enjoy learning how to make a scented bag through this cute
+            instruction.
+        </div>
+        <div class="image_container">
+            <img class="slide" src="W4_Opening Scene.png">
+            <img class="slide" src="W4_Step 1.png">
+            <img class="slide" src="W4_Step 2.png">
+            <img class="slide" src="W4_Step 3.png">
+            <img class="slide" src="W4_Step 4.png">
+            <img class="slide" src="W4_Step 5.png">
+            <img class="slide" src="W4_Ending Scene.png">
+            <iframe class="video" src="https://www.youtube.com/embed/DoQNBj9eFwE"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

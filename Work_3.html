@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>138</title>
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <link rel="stylesheet" type="text/css" href="Work 1-6 Style Sheet.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><img id="logo" src="Logo_Nav.png"></div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="About.html">About</a>
+            </li>
+            <li>
+                <a href="Work.html">Work</a>
+            </li>
+        </ul>
+        <div class="contact_button"><a href="Contact.html">Contact</a></div>
+        <div id="hamburger_menu" onclick="openNav()"><img src="Hamburger Menu.png"></div>
+    </header>
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="closeNav()"><img src="Quit.png"></div>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Work.html">Work</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("responsive_menu").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("responsive_menu").style.width = "0%";
+        }
+    </script>
+    <div class="showcase">
+        <div class="title">138</div>
+        <div class="description">
+            Peering the elegancy and rustication of Vietnamese cuisine, this project was born in order
+            to show my appreciation for regional cakes in particular. Taking pride in having a long-standing wet rice
+            civilization, it is not unfamiliar when Vietnam has received a world record for having the most dishes made
+            from
+            rice flour. Simple ingredients, sophisticated cooking, everything is perfectly harmonized to create unique
+            flavors for each type of cake. 1 ingredient, 3 regions, and 8 types of cake. This is what I have
+            encapsulated in
+            the project's title.
+        </div>
+        <div class="image_container">
+            <img class="slide" src="W3_Opening scene.png">
+            <img class="slide" src="W3_Abstract.png">
+            <img class="slide" src="W3_Icon intro.png">
+            <img class="slide" src="W3_Color inspiration.png">
+            <img class="slide" src="W3_Icon showcase.png">
+            <img class="slide" src="W3_Size adaptation 1.png">
+            <img class="slide" src="W3_Size adaptation 2.png">
+        </div>
+    </div>
+</body>
+
+</html>

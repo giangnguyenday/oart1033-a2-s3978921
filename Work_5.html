@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>52 Heartz</title>
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <link rel="stylesheet" type="text/css" href="Work 1-6 Style Sheet.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><img id="logo" src="Logo_Nav.png"></div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="About.html">About</a>
+            </li>
+            <li>
+                <a href="Work.html">Work</a>
+            </li>
+        </ul>
+        <div class="contact_button"><a href="Contact.html">Contact</a></div>
+        <div id="hamburger_menu" onclick="openNav()"><img src="Hamburger Menu.png"></div>
+    </header>
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="closeNav()"><img src="Quit.png"></div>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Work.html">Work</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("responsive_menu").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("responsive_menu").style.width = "0%";
+        }
+    </script>
+    <div class="showcase">
+        <div class="title">52 Heartz</div>
+        <div class="description">
+            This interactive webpage was a collaborative project in which I was in charge of design system, desktop &
+            mobile
+            layout as well as animation. A homepage with everything you need to have unforgettable memories of 52 HEARTZ
+            music festival.
+        </div>
+        <div class="image_container">
+            <img class="slide" src="W5.1.png">
+            <img class="slide" src="W5.2.png">
+            <img class="slide" src="W5.3.png">
+            <img class="slide" src="W5.4.png">
+            <img class="slide" src="W5.5.png">
+            <img class="slide" src="W5.6.png">
+            <img class="slide" src="W5.7.png">
+            <img class="slide" src="W5.8.png">
+            <img class="slide" src="W5.9.png">
+            <img class="slide" src="W5.10.png">
+            <img class="slide" src="W5.11.png">
+            <img class="slide" src="W5.12.png">
+            <img class="slide" src="W5.13.png">
+            <img class="slide" src="W5.14.png">
+            <img class="slide" src="W5.15.png">
+            <img class="slide" src="W5.16.png">
+            <iframe class="video" src="https://www.youtube.com/embed/GVxqojo56j8"></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/-yx-6lzaaQM"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

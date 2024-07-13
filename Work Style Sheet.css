@@ -1,0 +1,427 @@
+/* WORK */
+@font-face {
+    font-family: Clash Display Regular;
+    src: url(ClashDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: Clash Display SemiBold;
+    src: url(ClashDisplay-Semibold.ttf);
+}
+
+/** BACKGROUND **/
+body {
+    margin: 0%;
+    height: 90vw;
+    position: relative;
+    background: linear-gradient(180deg, #080C30 0%, #551791 100%);
+}
+
+/** NAVIGATION MENU **/
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    position: fixed;
+    padding: 1vw 0;
+    background: linear-gradient(180deg, #080C30 0%, rgba(8, 12, 48, 0.00) 100%);
+    backdrop-filter: blur(0.1vw);
+    display: flex;
+    flex-direction: row;
+    gap: 20vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header a {
+    color: rgba(187, 125, 247, 1);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#logo {
+    width: 2.5vw;
+    height: 2.825vw;
+}
+
+.navigation_menu {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.navigation_menu a {
+    transition: ease-in-out 0.2s;
+}
+
+.navigation_menu a:hover {
+    color: rgba(232, 212, 252, 1);
+}
+
+.contact_button {
+    display: inline-flex;
+    padding: 0.5vw 1.25vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(187, 125, 247, 1);
+    border-radius: 0.625vw;
+    transition: ease-in-out 0.2s;
+}
+
+.contact_button:hover {
+    background-color: rgba(141, 39, 242, 1);
+}
+
+.contact_button a {
+    color: rgba(28, 8, 48, 1);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+}
+
+/** HEADING **/
+.heading {
+    width: 100%;
+    position: absolute;
+    top: 4vw;
+}
+
+h1 {
+    font-family: Clash Display SemiBold;
+    font-size: 6vw;
+    background: linear-gradient(180deg, #8d27f2, #bb7df7, #d1a9fa, #e8d4fc);
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0.2vw 0.2vw 0.2vw #381061);
+    text-align: center;
+    margin-bottom: -1vw;
+}
+
+h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2vw;
+    font-weight: 400;
+    color: rgba(209, 169, 250, 1);
+    text-align: center;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+/** GALLERY **/
+.work_container_grid {
+    position: absolute;
+    top: 24vw;
+    left: 12vw;
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+}
+
+.work_container_grid a {
+    font-family: Clash Display SemiBold;
+    font-size: 1.75vw;
+    color: rgba(209, 169, 250, 1);
+    text-decoration: none;
+    transition: ease-in-out 300ms;
+}
+
+.work_container_grid a:hover {
+    text-decoration: underline;
+    color: rgba(232, 212, 252, 1);
+}
+
+h4 {
+    margin-top: 0.5vw;
+    margin-bottom: -1vw;
+}
+
+p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    color: rgba(209, 169, 250, 1);
+}
+
+.work_container_grid img {
+    width: 24vw;
+    height: auto;
+    border-radius: 0.5vw;
+    filter: grayscale(100%);
+    transition: ease-in-out 300ms;
+}
+
+.work_container_grid img:hover {
+    filter: none;
+}
+
+/** FOOTER **/
+footer {
+    width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1vw;
+    color: rgba(209, 169, 250, 1);
+    position: absolute;
+    bottom: 1vw;
+    text-align: center;
+    opacity: 30%;
+}
+
+/* RESPONSIVE MENU */
+#hamburger_menu {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+/** Tablet **/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /*** OVERLAY MENU ***/
+    header {
+        gap: 36vw;
+        padding: 2vw 0;
+    }
+
+    .contact_button,
+    .navigation_menu a {
+        display: none;
+    }
+
+    #hamburger_menu {
+        display: block;
+    }
+
+    .overlay {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background-color: rgba(8, 12, 48);
+        background-color: rgba(8, 12, 48, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 30%;
+        width: 100%;
+        text-align: center;
+        margin-top: 1.5vw;
+    }
+
+    .overlay a {
+        color: rgba(187, 125, 247, 1);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 8vw;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0.5vw;
+        display: block;
+        transition: ease-in-out 300ms;
+    }
+
+    .overlay a:focus {
+        color: rgba(232, 212, 252, 1);
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 2.5vw;
+        right: 5vw;
+    }
+
+    /*** RESIZE: logo, hamburger menu, close btn ***/
+    .overlay .closebtn img,
+    #logo,
+    #hamburger_menu img {
+        width: 3vw;
+        height: auto;
+    }
+
+    /*** BACKGROUND ***/
+    body {
+        height: 180vw;
+    }
+
+    /*** HEADING ***/
+    h1 {
+        font-size: 7vw;
+        margin-bottom: -2vw;
+    }
+
+    h3 {
+        font-size: 3vw;
+    }
+
+    /*** GALLERY ***/
+    .work_container_grid {
+        width: 75vw;
+        top: 36vw;
+        gap: 3vw;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+    }
+
+    .work_container_grid img {
+        filter: none;
+        width: 36vw;
+        border-radius: 0.75vw;
+    }
+
+    .work_container_grid a {
+        font-size: 2.75vw;
+        text-decoration: underline;
+    }
+
+    h4 {
+        margin-top: 1vw;
+        margin-bottom: -2vw;
+    }
+
+    p {
+        font-size: 1.75vw;
+    }    
+
+    /*** FOOTER ***/
+    footer {
+        font-size: 1.25vw;
+    }
+    
+}
+
+/** Mobile **/
+@media screen and (max-width: 767px) {
+
+    /*** OVERLAY MENU ***/
+    header {
+        gap: 32vw;
+        padding: 2.5vw 0;
+    }
+
+    .contact_button,
+    .navigation_menu a {
+        display: none;
+    }
+
+    #hamburger_menu {
+        display: block;
+    }
+
+    .overlay {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background-color: rgba(8, 12, 48);
+        background-color: rgba(8, 12, 48, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 35%;
+        width: 100%;
+        text-align: center;
+        margin-top: 3vw;
+    }
+
+    .overlay a {
+        color: rgba(187, 125, 247, 1);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 8vw;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0.5vw;
+        display: block;
+        transition: ease-in-out 300ms;
+    }
+
+    .overlay a:focus {
+        color: rgba(232, 212, 252, 1);
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 5vw;
+        right: 5vw;
+    }
+
+    /*** RESIZE: logo, hamburger menu, close btn ***/
+    .overlay .closebtn img,
+    #logo,
+    #hamburger_menu img {
+        width: 4vw;
+        height: auto;
+    }
+
+    /*** BACKGROUND ***/
+    body {
+        height: 520vw;
+    }
+
+    /*** HEADING ***/
+    .heading {
+        top: 8vw;
+    }
+    h1 {
+        font-size: 7vw;
+        margin-bottom: -2vw;
+    }
+
+    h3 {
+        font-size: 3vw;
+    }
+
+    /*** GALLERY ***/
+    .work_container_grid {
+        width: 75vw;
+        top: 40vw;
+        gap: 2.5vw;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        justify-content: center;
+    }
+
+    .work_container_grid img {
+        filter: none;
+        width: 64vw;
+        border-radius: 1vw;
+    }
+
+    .work_container_grid a {
+        font-size: 3.5vw;
+        text-decoration: underline;
+    }
+
+    h4 {
+        margin-top: 0.25vw;
+        margin-bottom: -2.5vw;
+    }
+
+    p {
+        font-size: 2.5vw;
+    } 
+
+    /*** FOOTER ***/
+    footer {
+        font-size: 2vw;
+    }
+}

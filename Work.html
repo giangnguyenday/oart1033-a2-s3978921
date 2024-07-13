@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore my projects!</title>
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <link rel="stylesheet" type="text/css" href="Work Style Sheet.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><img id="logo" src="Logo_Nav.png"></div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="About.html">About</a>
+            </li>
+            <li>
+                <a href="Work.html">Work</a>
+            </li>
+        </ul>
+        <div class="contact_button"><a href="Contact.html">Contact</a></div>
+        <div id="hamburger_menu" onclick="openNav()"><img src="Hamburger Menu.png"></div>
+    </header>
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="closeNav()"><img src="Quit.png"></div>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Work.html">Work</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("responsive_menu").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("responsive_menu").style.width = "0%";
+        }
+    </script>
+    <div class="heading">
+        <h1>Explore my WORKS!</h1>
+        <h3>Being a digital media student at RMIT has been the greatest opportunity for me to have multi-experience in
+            various niche. Here are some of my projects in 2023!</h3>
+    </div>
+    <div class="work_container_grid">
+
+        <section>
+            <img src="COVER_01.png">
+            <h4><a href="Work_1.html">The Dawn of Newness</a></h4>
+            <p>#3d_modeling</p>
+        </section>
+
+        <section>
+            <img src="COVER_02.png">
+            <h4><a href="Work_2.html">Stuck</a></h4>
+            <p>#digital_video</p>
+        </section>
+
+        <section>
+            <img src="COVER_03.png">
+            <h4><a href="Work_3.html">138</a></h4>
+            <p>#iconography</p>
+        </section>
+
+        <section>
+            <img src="COVER_04.png">
+            <h4><a href="Work_4.html">Scented Sachet Tutorial</a></h4>
+            <p>#interative_infographic</p>
+        </section>
+
+        <section>
+            <img src="COVER_05.png">
+            <h4><a href="Work_5.html">52 Heartz</a></h4>
+            <p>#web_design</p>
+        </section>
+
+        <section>
+            <img src="COVER_06.png">
+            <h4><a href="Work_6.html">Gratitude</a></h4>
+            <p>#interative_web-based_poetry</p>
+        </section>
+    </div>
+    <footer>© 2023 Tran Nguyen Tuyet Minh. All rights reserved.</footer>
+</body>
+
+</html>

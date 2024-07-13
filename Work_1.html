@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dawn of Newness</title>
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+    <link rel="stylesheet" type="text/css" href="Work 1-6 Style Sheet.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><img id="logo" src="Logo_Nav.png"></div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="About.html">About</a>
+            </li>
+            <li>
+                <a href="Work.html">Work</a>
+            </li>
+        </ul>
+        <div class="contact_button"><a href="Contact.html">Contact</a></div>
+        <div id="hamburger_menu" onclick="openNav()"><img src="Hamburger Menu.png"></div>
+    </header>
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="closeNav()"><img src="Quit.png"></div>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Work.html">Work</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("responsive_menu").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("responsive_menu").style.width = "0%";
+        }
+    </script>
+    <div class="showcase">
+        <div class="title">The Dawn of Newness</div>
+        <div class="description">
+            This 3D typographical sculpture is included in SOL61 - a first group project in my first
+            year at university.
+            Since the project's aim was about spreading positive message of leaving comfort zone to grow and become a
+            better
+            version, I wanted to convey the common characteristic of both things and how people might feel when they
+            experience aspects that are no longer in their safe zone.
+        </div>
+        <div class="image_container">
+            <img class="slide" src="W1.1.png">
+            <img class="slide" src="W1.2.png">
+            <img class="slide" src="W1.3.png">
+            <img class="slide" src="W1.4.png">
+            <img class="slide" src="W1.5.png">
+            <img class="slide" src="W1.6.png">
+            <img class="slide" src="W1.7.png">
+        </div>
+    </div>
+</body>
+
+</html>
